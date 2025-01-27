@@ -1,9 +1,8 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback } from 'react'
 import { FileUploaderProps } from '@/types';
 import { useDropzone } from "@uploadthing/react";
 import {
   generateClientDropzoneAccept,
-  generatePermittedFileTypes,
 } from "uploadthing/client";
 
 // import { useUploadThing } from "@/lib/uploadthing";

@@ -1,6 +1,6 @@
 import Link  from 'next/link';
 import React from 'react'
-import { ClerkProvider, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import NavItems from './NavItems';
 import { Button } from '../ui/button';
 import MobileNav from './MobileNav';

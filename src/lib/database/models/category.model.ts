@@ -1,6 +1,4 @@
 import {Document,Schema,model,models} from 'mongoose';
-import { unique } from 'next/dist/build/utils';
-
 export interface ICategory extends Document{
     _id:string;
     name:string;

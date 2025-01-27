@@ -4,8 +4,6 @@ import {CreateCategoryParams} from "@/types"
 import {handleError} from "@/lib/utils";
 import {connectToDatabase} from "../database"
 import Category from "../database/models/category.model"
-import { trackSynchronousPlatformIOAccessInDev } from "next/dist/server/app-render/dynamic-rendering";
-
 export const createCategory = async ({categoryName}:CreateCategoryParams)=>{
     try{
         await connectToDatabase();
