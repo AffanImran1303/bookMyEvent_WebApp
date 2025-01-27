@@ -5,7 +5,7 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 0% 14.51% 27.84%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -74,7 +74,8 @@
 }
 
 body {
-  font-family: var(--font-poppins)
+  font-family: var(--font-poppins);
+  color:#002547;
 }
 
 .filter-grey {
@@ -206,33 +207,36 @@ body {
 
   /* SHADCN OVERRIDES */
   .select-field {
-    @apply w-full bg-grey-50 h-[54px] placeholder:text-grey-500 rounded-full p-regular-16 px-5 py-3 border-none focus-visible:ring-transparent focus:ring-transparent !important;
+    @apply w-full bg-gray-50 h-[54px] placeholder:text-gray-500 rounded-full p-regular-16 px-5 py-3 border-none focus-visible:ring-transparent focus:ring-transparent !important;
   }
 
   .input-field {
-    @apply bg-grey-50 h-[54px] focus-visible:ring-offset-0 placeholder:text-grey-500 rounded-full p-regular-16 px-4 py-3 border-none focus-visible:ring-transparent !important;
+    @apply bg-gray-50 h-[54px] focus-visible:ring-offset-0 placeholder:text-gray-500 rounded-full p-regular-16 px-4 py-3 focus-visible:border-2 focus-visible:ring-[#1b72eb] !important;
   }
 
   .textarea {
-    @apply bg-grey-50 flex flex-1 placeholder:text-grey-500 p-regular-16 px-5 py-3 border-none focus-visible:ring-transparent !important;
+    @apply bg-gray-50 flex flex-1 placeholder:text-gray-500 p-regular-16 px-5 py-3 border-none focus-visible:ring-transparent !important;
   }
 
   .button {
     @apply rounded-full h-[54px] p-regular-16;
   }
   .primary-button{
-    @apply bg-[#1b72eb] text-white;
+    @apply bg-[#1b72eb] text-white hover:bg-[#002547];
   }
   .secondary-button{
-    @apply bg-[#002547] text-white;
+    @apply bg-[#002547] text-white hover:bg-[#1b72eb];
   }
 
   .select-item {
-    @apply py-3 cursor-pointer  focus:bg-primary-50;
+    @apply py-3 cursor-pointer;
   }
 
   .toggle-switch {
     @apply bg-gray-300 !important;
+  }
+  .main-heading{
+    @apply text-[#1b72eb] h3-bold;
   }
 }
 
