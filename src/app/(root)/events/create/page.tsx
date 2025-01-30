@@ -4,7 +4,8 @@ import React from 'react'
 
 const CreateEvent = async () => {
     const { sessionClaims } = await auth();
-    const userId = sessionClaims?.userId as string;
+    console.log("Session Claims:",sessionClaims);
+    const userId = sessionClaims?.sub as string;
     console.log("userId:",userId)
 
     return (
