@@ -33,7 +33,7 @@ export async function createEvent({ userId, event, path }: CreateEventParams) {
     await connectToDatabase()
     console.log("Database connection successful");
 
-    const organizer = await User.findById({clerkId:userId});
+    const organizer = await User.findOne({clerkId:userId});
     if (!organizer){
       throw new Error('Organizer not found')
     }
