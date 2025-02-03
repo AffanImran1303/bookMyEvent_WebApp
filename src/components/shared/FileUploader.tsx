@@ -4,7 +4,7 @@ import { useDropzone } from "@uploadthing/react";
 import {
   generateClientDropzoneAccept,
 } from "uploadthing/client";
-
+import Image from "next/image";
 // import { useUploadThing } from "@/lib/uploadthing";
 import { convertFileToUrl } from '@/lib/utils';
 import { Button } from '../ui/button';
@@ -28,7 +28,7 @@ export const FileUploader=({imageUrl,onFieldChange,setFiles}:FileUploaderProps)=
 
             {imageUrl?(
                 <div className="flex h-full w-full flex-1 justify-center">
-                    <img
+                    <Image
                     src={imageUrl}
                     alt="image"
                     width={250}
@@ -38,7 +38,7 @@ export const FileUploader=({imageUrl,onFieldChange,setFiles}:FileUploaderProps)=
                 </div>
             ):(
                 <div className="flex-center flex-col py-5 text-grey-500">
-                    <img src="/assets/icons/uploadIcon.png" width={77} height={77} alt="file upload"/>
+                    <Image src="/assets/icons/uploadIcon.png" width={77} height={77} alt="file upload"/>
                     <h3 className="mb-2 mt-2">Drag photo here</h3>
                     <p className="p-medium-12 mb-4">SVG,PNG,JPG</p>
                     <Button type="button" className="primary-button">Select from my device</Button>

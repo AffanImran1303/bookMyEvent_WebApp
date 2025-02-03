@@ -190,7 +190,7 @@ export type CreateUserParams = {
   }
 
   export type UpdateEventProps={
-    params:{
+    params:Promise<{
       id:string
-    }
+    }>
   }
