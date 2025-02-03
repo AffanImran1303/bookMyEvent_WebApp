@@ -56,7 +56,7 @@ export async function getEventById(eventId: string) {
   try {
     await connectToDatabase()
 
-    const event = await populateEvent(Event.findById(eventId))
+    const event = await Event.findById(eventId).populate('category','_id name').populate('organizer','_id firstName lastName');
 
     if (!event) throw new Error('Event not found')
 

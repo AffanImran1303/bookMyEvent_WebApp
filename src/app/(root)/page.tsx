@@ -1,9 +1,24 @@
+import CategoryFilter from "@/components/shared/CategoryFilter";
+import Collection from "@/components/shared/Collection";
+import Search from "@/components/shared/Search";
 import { Button } from "@/components/ui/button";
-import { SearchParams } from "next/dist/server/request/search-params";
+import { getAllEvents } from "@/lib/actions/event.actions";
+import { SearchParamProps } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function Home() {
+export default async function Home({searchParams}:SearchParamProps) {
+  const currentSearchParams=await searchParams;
+  const page = Number(currentSearchParams?.page) || 1;
+  const searchText = (currentSearchParams?.query as string) || '';
+  const category = (currentSearchParams?.category as string) || '';
+
+  const events = await getAllEvents({
+    query: searchText,
+    category,
+    page,
+    limit: 6
+  })
 
   return (
     <>
@@ -28,6 +43,24 @@ export default async function Home() {
           />
           
         </div>
+      </section>
+      <section id="events" className="wrapper-second my-36 flex flex-col gap-8 md:gap-12">
+        <h2 className="h2-bold text-white flex justify-center text-center mt-8">Experience<br/> Unforgettable Events</h2>
+
+        <div className="flex w-full flex-col justify-center gap-5 md:flex-row">
+          <div className="flex w-full md:w-[45%]"><Search /></div>
+          <div className="flex w-full md:w-[45%]"><CategoryFilter /></div>
+        </div>
+
+        <Collection 
+          data={events?.data}
+          emptyTitle="No Events Found"
+          emptyStateSubtext="Come back later"
+          collectionType="All_Events"
+          limit={6}
+          page={page}
+          totalPages={events?.totalPages}
+        />
       </section>
     </>
 
