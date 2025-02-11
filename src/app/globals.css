@@ -88,9 +88,9 @@ body {
   .wrapper {
     @apply max-w-7xl lg:mx-auto p-5 md:px-10 xl:px-0 w-full;
   }
-  .wrapper-second {
+  /* .wrapper-second {
     @apply bg-[#1b72eb] rounded-2xl max-w-7xl lg:mx-auto lg:max-w-[92vw] p-7 md:px-10 xl:px-0 w-full;
-  }
+  } */
 
   .flex-center {
     @apply flex justify-center items-center;
@@ -150,6 +150,9 @@ body {
   /* 20 */
   .p-bold-20 {
     @apply font-bold text-[20px] leading-[30px] tracking-[2%];
+  }
+  .p-semibold-22 {
+    @apply text-[22px] font-semibold leading-[30px] tracking-[2%];
   }
 
   .p-semibold-20 {

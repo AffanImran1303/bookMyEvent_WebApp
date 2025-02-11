@@ -7,10 +7,10 @@ import MobileNav from './MobileNav';
 
 const Header = () => {
   return (
-    <header className="w-full border-b">
+    <header className="w-full">
     <div className="wrapper flex items-center justify-between">
       <Link href="/" className="w-36">
-      <p className="text-[#1b72eb] p-semibold-20">bookmyevent</p>
+      <p className="text-[#1b72eb] p-semibold-22">bookmyevent.</p>
       </Link>
       <SignedIn>
         <nav className="md:flex-between hidden w-full max-w-xs">

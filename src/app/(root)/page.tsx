@@ -44,8 +44,57 @@ export default async function Home({searchParams}:SearchParamProps) {
           
         </div>
       </section>
-      <section id="events" className="wrapper-second my-36 flex flex-col gap-8 md:gap-12">
-        <h2 className="h2-bold text-white flex justify-center text-center mt-8">Experience<br/> Unforgettable Events</h2>
+      <section className="wrapper mt-24 flex flex-col gap-8 md:flex-row md:gap-12 mt-36">
+        <div className="flex flex-row gap-2">
+          <div className="">
+            <Image
+              src="/assets/icons/box.png"
+              alt="box"
+              width={50}
+              height={50}
+              className="h-[45px] md:max-w-[80px] 2xl:max-w-[100px]"
+            />
+          </div>
+          <div className="">
+          <p className="p-semibold-20">Everything in One Place</p>
+          <p className="p-regular-14 mt-2">Simplify your event search by finding everything in one place.</p>
+          </div>
+        </div>
+        <span className="hidden md:flex bg-gray-200 rounded-lg w-1 h-20"></span>
+        <div className="flex flex-row gap-2">
+          <div className="">
+          <Image
+            src="/assets/icons/filter.png"
+            alt="filter"
+            width={50}
+            height={50}
+            className="h-[45px] md:max-w-[80px] 2xl:max-w-[100px]"
+          />
+          </div>
+          <div>
+          <p className="p-semibold-20">Filter for What You Want</p>
+          <p className="p-regular-14 mt-2">Got fishing on the brain? Need a sauna and a swim to reset? Instantly customize results.</p>
+          </div>
+        </div>
+        <span className="hidden md:flex bg-gray-200 rounded-lg w-1 h-20"></span>
+        <div className="flex flex-row gap-2">
+          <div>
+            <Image
+              src="/assets/icons/event.png"
+              alt="event"
+              width={50}
+              height={50}
+              className="h-[45px] md:max-w-[80px] 2xl:max-w-[100px]"
+            />
+          </div>
+          <div>
+          <p className="p-semibold-20">Find Your Perfect Event</p>
+          <p className="p-regular-14 mt-2">Discover a world of events, from concerts to conferences, all in one place.</p>
+          </div>
+        </div>
+      </section>
+      <section id="events" className="wrapper my-36 flex flex-col gap-8 md:gap-12">
+        <h2 className="h2-bold text-[#002547] flex justify-center text-center mt-8">Experience<br/> Unforgettable Events</h2>
 
         <div className="flex w-full flex-col justify-center gap-5 md:flex-row">
           <div className="flex w-full md:w-[45%]"><Search /></div>
@@ -61,6 +110,57 @@ export default async function Home({searchParams}:SearchParamProps) {
           page={page}
           totalPages={events?.totalPages}
         />
+      </section>
+      <section className="wrapper">
+        <h3 className="h3-bold text-[#002547] flex justify-center text-center">3 Steps to Your Next Event</h3>
+        <div className="border-2 grid grid-flow-col md:grid-cols-3 md:gap-12 md:mt-20">
+          <div className="flex flex-col">
+            <div className="m-4 place-self-center">
+            <Image
+              src="/assets/icons/user.png"
+              alt="user"
+              width={1000}
+              height={1000}
+              className="h-[100px] w-[100px] md:max-w-[70px] md:max-h-[100px] 2xl:max-w-[100px]"
+            />
+            </div>
+            <div className="text-center">
+              <p className="p-semibold-22 m-2">Login</p>
+              <p className="p-regular-16 m-2">Get started with your account in seconds</p>
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <div className="m-4 place-self-center">
+            <Image
+              src="/assets/icons/search.png"
+              alt="search"
+              width={1000}
+              height={1000}
+              className="h-[100px] w-[100px] md:max-w-[70px] md:max-h-[100px] 2xl:max-w-[100px]"
+            />
+            </div>
+            <div className="text-center">
+              <p className="p-semibold-22 m-2">Search & Discover</p>
+              <p className="p-regular-16 m-2">Find your dream event with our easy-to-use search filters.</p>
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <div className="m-4 place-self-center">
+            <Image
+              src="/assets/icons/pay.png"
+              alt="pay"
+              width={1000}
+              height={1000}
+              className="h-[100px] w-[100px] md:max-w-[70px] md:max-h-[100px] 2xl:max-w-[100px]"
+            />
+            </div>
+            <div className="text-center">
+              <p className="p-semibold-22 m-2">Book Now & Pay</p>
+              <p className="p-regular-16 m-2">Complete your booking in a few clicks and receive your tickets instantly.</p>
+            </div>
+          </div>
+        </div>
+      
       </section>
     </>
 
